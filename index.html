@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300|Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Another try to create my first website! ### If you like this, donate ! ###</title>
+    <script src="assets/js/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+    <body>
+        <header>
+            
+            <nav id = "myTopnav">
+                <a href="">Despre mine</a>
+                <a href="">Retete</a>
+                <a class="logo" href = "index.html" id = "logo" onclick="myFunction()"><img src = "assets/img/header/logo.png"></a>
+                <a href="">Tarife</a>
+                <a href="">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </nav>
+
+        </header>
+
+        <div class="content">
+            <!--Begin video background -->
+            <div id="overlay">
+                    <video class="visible-desktop" id="hero-vid" poster="assets/video/Snapshots/food.jpg" autoplay loop muted>
+                        <source type="video/webm" src="assets/video/WEBM/food.webm"></source>
+                        <source type="video/mp4" src="assets/video/MP4/food.mp4"></source>
+                    </video>
+                    <img id="hero-pic" class="hidden-desktop" src="assets/video/Snapshots/food.jpg" alt="">
+                </div>
+                <!-- End video background -->
+
+            <!-- Main Title -->
+            <section id="main_title">
+                <h1>Bucataria lui Chef Tigaie</h1>
+            </section>
+            <!-- End main title -->
+
+            <!-- About section -->
+            <section id = "about">
+                <h1 id = "about_title">Despre mine</h1>
+                <img src = "assets/img/about/chef_about.png">
+                
+                <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie.</article>
+                <article>Am creeat acest site pentru a oferi din tainele acestei meserii celor care vor sa invete.</article>
+            </section>
+            <!--End about section -->
+
+        </div>
+
+    </body>
+
+</html>
