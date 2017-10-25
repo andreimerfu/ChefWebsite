@@ -28,10 +28,10 @@ $(document).ready(function () {
 
 /* Responsive navbar */
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "nav") {
+    var x = document.getElementById("nav_mobile");
+    if (x.className === "nav_mobile") {
         x.className += " responsive";
     } else {
-        x.className = "nav";
+        x.className = "nav_mobile";
     }
 }

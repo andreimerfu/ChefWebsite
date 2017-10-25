@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300|Montserrat' rel='stylesheet' type='text/css'>
@@ -20,8 +19,15 @@
                 <a class="logo" href = "index.html" id = "logo" onclick="myFunction()"><img src = "assets/img/header/logo.png"></a>
                 <a href="">Tarife</a>
                 <a href="">Contact</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
+
+            <div class="nav_mobile" id="nav_mobile">
+                <a href="#home">Despre mine</a>
+                <a href="#news">Retete</a>
+                <a href="#contact">Tarife</a>
+                <a href="#about">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div> 
 
         </header>
 
@@ -45,12 +51,17 @@
             <!-- About section -->
             <section id = "about">
                 <h1 id = "about_title">Despre mine</h1>
-                <img src = "assets/img/about/chef_about.png">
-                
+                <div class = "about_logo">
+                    <img src = "assets/img/about/chef_about.png">
+                </div>
                 <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie.</article>
                 <article>Am creeat acest site pentru a oferi din tainele acestei meserii celor care vor sa invete.</article>
             </section>
             <!--End about section -->
+
+            <section id = "recipe">
+                <h1 id = "recipe_title">Retetele mele</h1>
+            </section>
 
         </div>
 
