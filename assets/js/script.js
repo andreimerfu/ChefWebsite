@@ -1,16 +1,16 @@
 /* Parallax effect require jQuery*/
 
-$(document).ready(function () {
-    $(window).on('load scroll', function () {
-        var scrolled = $(this).scrollTop();
-        $('#title').css({
-            'transform': 'translate3d(0, ' + -(scrolled * 0.2) + 'px, 0)', // parallax (20% scroll rate)
-            'opacity': 1 - scrolled / 400 // fade out at 400px from top
-        });
-        $('#hero-vid').css('transform', 'translate3d(0, ' + -(scrolled * 0.25) + 'px, 0)'); // parallax (25% scroll rate)
-    });
+// $(document).ready(function () {
+//     $(window).on('load scroll', function () {
+//         var scrolled = $(this).scrollTop();
+//         $('#title').css({
+//             'transform': 'translate3d(0, ' + -(scrolled * 0.2) + 'px, 0)', // parallax (20% scroll rate)
+//             'opacity': 1 - scrolled / 400 // fade out at 400px from top
+//         });
+//         $('#hero-vid').css('transform', 'translate3d(0, ' + -(scrolled * 0.25) + 'px, 0)'); // parallax (25% scroll rate)
+//     });
     
-});
+// });
 
  // video controls
  $('#state').on('click', function () {
@@ -35,3 +35,12 @@ function myFunction() {
         x.className = "nav_mobile";
     }
 }
+
+
+/*Scroll down*/
+$(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });

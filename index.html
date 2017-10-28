@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300|Montserrat' rel='stylesheet' type='text/css'>
@@ -12,35 +13,36 @@
 
     <body>
         <header>
-            
-            <nav id = "myTopnav">
-                <a href="">Despre mine</a>
-                <a href="">Retete</a>
-                <a class="logo" href = "index.html" id = "logo" onclick="myFunction()"><img src = "assets/img/header/logo.png"></a>
-                <a href="">Tarife</a>
-                <a href="">Contact</a>
+            <nav id="myTopnav">
+                <a href="#about">Despre mine</a>
+                <a href="#recipe">Retete</a>
+                <a class="logo" href="index.html" id="logo" onclick="myFunction()">
+                    <img src="assets/img/header/logo.png">
+                </a>
+                <a href="#price">Tarife</a>
+                <a href="#contact">Contact</a>
             </nav>
 
             <div class="nav_mobile" id="nav_mobile">
-                <a href="#home">Despre mine</a>
-                <a href="#news">Retete</a>
-                <a href="#contact">Tarife</a>
-                <a href="#about">About</a>
+                <a href="#about">Despre mine</a>
+                <a href="#recipe">Retete</a>
+                <a href="#price">Tarife</a>
+                <a href="#contact">Contact</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-            </div> 
+            </div>
 
         </header>
 
         <div class="content">
             <!--Begin video background -->
             <div id="overlay">
-                    <video class="visible-desktop" id="hero-vid" poster="assets/video/Snapshots/food.jpg" autoplay loop muted>
-                        <source type="video/webm" src="assets/video/WEBM/food.webm"></source>
-                        <source type="video/mp4" src="assets/video/MP4/food.mp4"></source>
-                    </video>
-                    <img id="hero-pic" class="hidden-desktop" src="assets/video/Snapshots/food.jpg" alt="">
-                </div>
-                <!-- End video background -->
+                <video class="visible-desktop" id="hero-vid" poster="assets/video/Snapshots/food.jpg" autoplay loop muted>
+                    <source type="video/webm" src="assets/video/WEBM/food.webm"></source>
+                    <source type="video/mp4" src="assets/video/MP4/food.mp4"></source>
+                </video>
+                <img id="hero-pic" class="hidden-desktop" src="assets/video/Snapshots/food.jpg" alt="">
+            </div>
+            <!-- End video background -->
 
             <!-- Main Title -->
             <section id="main_title">
@@ -49,20 +51,73 @@
             <!-- End main title -->
 
             <!-- About section -->
-            <section id = "about">
-                <h1 id = "about_title">Despre mine</h1>
-                <div class = "about_logo">
-                    <img src = "assets/img/about/chef_about.png">
-                </div>
-                <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie.</article>
-                <article>Am creeat acest site pentru a oferi din tainele acestei meserii celor care vor sa invete.</article>
+            <section id="about">
+                <h1 id="about_title">Despre mine</h1>
+                <a class = "about_logo" href = "about.html"><img src="assets/img/about/chef_about.png"></a>
+                <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie.
+                          Am creeat acest site pentru a oferi din tainele acestei meserii celor care vor sa invete.
+                          Tot prin acest site vreau sa imi prezint oferta de a fii chef la evenimentul dumneavoastra.
+                </article>
             </section>
             <!--End about section -->
 
-            <section id = "recipe">
-                <h1 id = "recipe_title">Retetele mele</h1>
+            <!-- begin recipe -->
+
+            <section id="recipe">
+
+                <div class="container">
+                    <article>
+                        <h2>Retetele mele</h2>
+                        <p>Prezint cateva din secretele mele culinare. Arunca o privire si invata cele mai savuroase retete!</p>
+                    </article>
+                </div>
+
+                <div id="imagini">
+                    <img src="assets/img/recipe/img1.jpg" alt="">
+                    <img src="assets/img/recipe/img2.jpg" alt="">
+                    <img src="assets/img/recipe/img3.jpg" alt="">
+                    <img src="assets/img/recipe/img4.jpg" alt="">
+                    <img src="assets/img/recipe/img5.jpg" alt="">
+
+                </div>
+
+            </section>
+            <!-- end recipe -->
+
+            <!-- begin price -->
+            <section id = "price">
+                <div class = "text">
+                    <h2> Chef pentru evenimentul tau !</h2>
+                    <p> Pentru un eveniment de nota 10 ai nevoie de mancare pe masura !</p>
+                    <p> Chef Tigaie este solutia !</p>
+                    <br /><br />
+                    <p> Pretul pentru un botez incepe de la 2500 de lei.</p>
+                    <button class="price_button1">Comanda acum</button>
+                    
+                    <p> Pretul pentru o nunta incepe de la 5000 de lei </p>
+                    <button class="price_button2">Comanda acum</button>
+                    
+                </div>
+                <a class = "price_logo" href = "price.html"><img src="assets/img/price/price_logo.png"></a>
+                
+
             </section>
 
+
+
+            <!-- end price -->
+
+            <!-- begin contact -->
+            <section id = "contact">
+                <div class = "container">
+                    <h2> Contacteaza-l pe chef Tigaie chiar acum !</h2>
+
+                    <h1> Alege o varianta de contact: </h1>
+                    <button class = "contact1_button"> Telefonic </button>
+                    <button class = "contact2_button"> Email </button>
+                </div>
+            </section>
+            <!-- end contact -->
         </div>
 
     </body>
