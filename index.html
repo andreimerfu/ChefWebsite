@@ -15,7 +15,15 @@
         <header>
             <nav id="myTopnav">
                 <a href="#about">Despre mine</a>
-                <a href="#recipe">Retete</a>
+                <!-- <a href="#recipe">Retete</a> -->
+                <div class="retete">
+                    <button onclick="dropDown()" class="dropbtn">Retete</button>
+                    <div id="retete_dropdown" class="retete-content">
+                      <a href="#recipe">Starter</a>
+                      <a href="#recipe">Fel principal</a>
+                      <a href="#recipe">Desert</a>
+                    </div>
+                  </div> 
                 <a class="logo" href="index.html" id="logo" onclick="myFunction()">
                     <img src="assets/img/header/logo.png">
                 </a>

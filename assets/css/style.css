@@ -112,15 +112,17 @@ nav{
   z-index: 1000;
 }
 
-nav a{
+nav a, nav .dropbtn{
   text-decoration: none;
   color: bisque;
   font-size: 24px;
   margin: 0 40px;
   font-family: 'Oleo Script', Helvetica, sans-serif;
+  background-color: transparent;
+  border-style: none;
 }
 
-nav a:hover{
+nav a:hover, .retete .dropbtn:hover{
   color: orangered;
 }
 
@@ -146,6 +148,37 @@ nav .icon {
 }
 
 
+/* Drop down button */
+
+
+.retete {
+  position: relative;
+  display: inline-block;
+}
+
+.retete-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.retete-content a {
+  font-size: 18px;
+  text-align: center;
+  color: bisque;
+  text-decoration: none;
+  display: block;
+}
+
+.retete a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+
 #nav_mobile a:hover{
   color: crimson;
 }
@@ -156,6 +189,7 @@ nav .icon {
 
 @media screen and (max-width: 600px){
   nav a {display: none;}
+  nav .retete {display: none;}
   #nav_mobile {
     position: fixed;
     z-index: 1000;
@@ -324,6 +358,13 @@ nav .icon {
   -moz-transition: all 5s ease;
   -o-transition: all 5s ease;
   transition: all 5s ease;
+  padding: 20px 20px;
+}
+
+#recipe img:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #recipe a {
@@ -428,3 +469,12 @@ nav .icon {
   font-size: 16px;
   border: none;
 }
+
+
+
+
+
+
+
+
+
