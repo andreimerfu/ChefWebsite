@@ -14,98 +14,18 @@
 
 
 html,body {
-font-family:'Oleo Script', Helvetica, sans-serif;
-font-size:100%;
-height:100%;
-line-height:1.45;
-margin: 0;
-
-}
-
-
-/* Video Overlay */
-
-#overlay {
-/* background-color:rgba(0,0,0,.65); */
-height:100%;
-left:0;
-position:relative;
-top:0;
-transition:background-color 300ms ease;
-width:100%;
-}
-
-.fade { background-color:rgba(0,0,0,.85) !important; }
-
-
-/* Hero Video + Fallback */
-
-#hero-vid {
-backface-visibility:hidden;
-background-size:cover;
-background-repeat: no-repeat;
-bottom:0;
-height:auto;
-min-height:100%;
-min-width:100%;
-perspective:1000;
-position:relative;
-right:0;
-width:auto;
-background-position: 50% 50%;
-z-index:-1;
-}
-
-#hero-pic {
-display:block;
-height:auto;
-width:100%;
-}
-
-#state {
-bottom:0;
-cursor:pointer;
-font-size:2.25rem;
-left:0;
-line-height:1;
-padding:2rem 2.5rem 1.65rem;
-position:absolute;
-}
-
-/* Media Queries */
-
-@media only screen and (max-width:768px) {
-    #overlay { height:auto; }
-}
-
-
-/* Visibility Helpers */
-
-@media only screen and (min-width:769px) {
-    .visible-mobile,.visible-tablet,.hidden-desktop { display:none !important; }
-}
-
-@media only screen and (min-width:480px) and (max-width:768px) {
-    .visible-mobile,.hidden-tablet,.visible-desktop { display:none !important; }
-}
-
-@media only screen and (max-width:479px) {
-    .hidden-mobile,.visible-tablet,.visible-desktop { display:none !important; }
-}
-
-html, body{
+  font-family:'Oleo Script', Helvetica, sans-serif;
+  width: 100%;
   height: 100%;
-}
-
-body{
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 nav{
   display: flex;
   width: 100%;
-  height: 20%;
-  background-color: transparent;
+  height: 86px;
+  background-color: white;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -115,6 +35,7 @@ nav{
 nav a, nav .dropbtn{
   text-decoration: none;
   color: bisque;
+  opacity: none;
   font-size: 24px;
   margin: 0 40px;
   font-family: 'Oleo Script', Helvetica, sans-serif;
@@ -216,6 +137,9 @@ nav .icon {
     text-align: left;
     z-index: 10000;
   }
+  nav{
+    background-color: transparent;
+  }
 }
 
 #nav_mobile {
@@ -243,7 +167,15 @@ nav .icon {
 }
 
 
-
+#main_title {
+  background-image: url('../img/subheader/food1.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 950px;
+  top: 0;
+  left: 0;
+  text-align: center; 
+}
 
 #main_title h1 {
   font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif;
@@ -409,72 +341,5 @@ nav .icon {
   color: #fff;
   font-size: 16px;
 }
-
-#price {
-  width: 100%;
-  padding: 90px 0;
-  text-align: left;
-  background-color: crimson;
-}
-
-#price .text{
-  color: white;
-  position: relative;
-  left: 100px;
-  font-size: 36px;
-
-}
-
-#price .price_logo img {
-  width: 300px;
-  height: auto;
-  position: relative;
-  float: right;
-  bottom: 500px;
-  right: 200px;
-}
-
-#price .price_button1, .price_button2 {
-  position : relative;
-  left: 700px;
-  bottom: 100px;
-  background-color: cornflowerblue;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 16px;
-  padding: 20px;
-  
-}
-
-
-#contact {
-  width: 100%;
-  padding: 90px 0;
-  text-align: left;
-  background-color: yellowgreen;
-  position: absolute;
-  text-align: center;
-}
-
-#contact .contact1_button, .contact2_button {
-  position: relative;
-  padding: 20px;
-  background-color: crimson;
-  color: white;
-  border-radius: 16px;
-  cursor: pointer;
-  font-size: 16px;
-  border: none;
-}
-
-
-
-
-
-
-
 
 
