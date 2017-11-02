@@ -25,7 +25,7 @@ nav{
   display: flex;
   width: 100%;
   height: 86px;
-  background-color: white;
+  background-color: whitesmoke;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -34,9 +34,9 @@ nav{
 
 nav a, nav .dropbtn{
   text-decoration: none;
-  color: bisque;
+  color: teal;
   opacity: none;
-  font-size: 24px;
+  font-size: 28px;
   margin: 0 40px;
   font-family: 'Oleo Script', Helvetica, sans-serif;
   background-color: transparent;
@@ -44,7 +44,7 @@ nav a, nav .dropbtn{
 }
 
 nav a:hover, .retete .dropbtn:hover{
-  color: orangered;
+  color: crimson;
 }
 
 #logo img{
@@ -80,7 +80,7 @@ nav .icon {
 .retete-content {
   display: none;
   position: absolute;
-  background-color: transparent;
+  background-color: whitesmoke;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -88,9 +88,9 @@ nav .icon {
 }
 
 .retete-content a {
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
-  color: bisque;
+  color: teal;
   text-decoration: none;
   display: block;
 }
@@ -104,43 +104,7 @@ nav .icon {
   color: crimson;
 }
 
-@media screen and (min-width: 600px){
-   #nav_mobile a:not(:last-child) {display: none;} 
-}
 
-@media screen and (max-width: 600px){
-  nav a {display: none;}
-  nav .retete {display: none;}
-  #nav_mobile {
-    position: fixed;
-    z-index: 1000;
-  }
-  #nav_mobile a:not(:last-child) {display: none;} 
-  #nav_mobile a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px){
-  #nav_mobile.responsive {position: relative;}
-  #nav_mobile.responsive a.icon {
-    position: block;
-    right: 0;
-    top: 0;
-    z-index: 10000;
-    
-  }
-  #nav_mobile.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    z-index: 10000;
-  }
-  nav{
-    background-color: transparent;
-  }
-}
 
 #nav_mobile {
   background-color: #333;
@@ -211,8 +175,7 @@ nav .icon {
   
   overflow: auto;
   font-size: 24px;
-  background-color: bisque;
-  opacity: 0.7;
+  background-color: rgba(31, 109, 31, 0.733);
 }
 
 #about_title {
@@ -243,7 +206,7 @@ nav .icon {
   width: 100%;
   padding: 90px 0;
   text-align: center;
-  background-color: teal;
+  background-color: whitesmoke;
 }
 
 #recipe h2 {
@@ -259,7 +222,7 @@ nav .icon {
   bottom: 6px;
   left: 18%;
   width: 20%;
-  border-bottom: 1px solid #faa541;
+  border-bottom: 6px double green;
 }
 
 #recipe h2:after {
@@ -268,7 +231,7 @@ nav .icon {
   bottom: 6px;
   right: 18%;
   width: 20%;
-  border-bottom: 1px solid #faa541;
+  border-bottom: 6px double green;
 }
 
 #recipe p {
@@ -286,11 +249,14 @@ nav .icon {
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
-  -webkit-transition: all 5s ease;
-  -moz-transition: all 5s ease;
-  -o-transition: all 5s ease;
-  transition: all 5s ease;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
   padding: 20px 20px;
+  border-width:3px;  
+  border-style:solid;
+  border-color: rgba(31, 109, 31, 0.733);
 }
 
 #recipe img:hover{
@@ -342,4 +308,81 @@ nav .icon {
   font-size: 16px;
 }
 
+#recipe_iframe {
+  background-color: rgba(31, 109, 31, 0.733);
+}
 
+#recipe_iframe .link{
+  display: block;
+}
+
+
+#recipe_iframe .navbar_recipe {
+  width: 100%;
+  height: 20px;
+  text-align : center;
+  font-size: 36px;
+  color: firebrick;
+}
+
+#recipe_iframe .link {
+ width: 90%;
+ margin: 30px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive media queries */
+
+/* Phone : 360x640 */
+@media screen and (min-width: 640px){
+  #nav_mobile a:not(:last-child) {display: none;} 
+}
+
+@media screen and (max-width: 640px){
+ nav a {display: none;}
+ nav .retete {display: none;}
+ #nav_mobile {
+   position: fixed;
+   z-index: 1000;
+ }
+ #nav_mobile a:not(:last-child) {display: none;} 
+ #nav_mobile a.icon {
+   float: right;
+   display: block;
+ }
+}
+
+@media screen and (max-width: 640px){
+ #nav_mobile.responsive {position: relative;}
+ #nav_mobile.responsive a.icon {
+   position: block;
+   right: 0;
+   top: 0;
+   z-index: 10000;
+   
+ }
+ #nav_mobile.responsive a {
+   float: none;
+   display: block;
+   text-align: left;
+   z-index: 10000;
+ }
+ nav{
+   background-color: transparent;
+ }
+}
