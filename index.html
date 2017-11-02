@@ -19,11 +19,11 @@
                 <div class="retete">
                     <button onclick="dropDown()" class="dropbtn">Retete</button>
                     <div id="retete_dropdown" class="retete-content">
-                      <a href="#recipe">Starter</a>
-                      <a href="#recipe">Fel principal</a>
-                      <a href="#recipe">Desert</a>
+                        <a href="#recipe">Starter</a>
+                        <a href="#recipe">Fel principal</a>
+                        <a href="#recipe">Desert</a>
                     </div>
-                  </div> 
+                </div>
                 <a class="logo" href="index.html" id="logo" onclick="myFunction()">
                     <img src="assets/img/header/logo.png">
                 </a>
@@ -41,77 +41,88 @@
 
         </header>
 
-            <!--Begin video background -->
-            <!-- <div id="overlay">
+        <!--Begin video background -->
+        <!-- <div id="overlay">
                 <video class="visible-desktop" id="hero-vid" poster="assets/video/Snapshots/food.jpg" autoplay loop muted>
                     <source type="video/webm" src="assets/video/WEBM/food.webm"></source>
                     <source type="video/mp4" src="assets/video/MP4/food.mp4"></source>
                 </video>
                 <img id="hero-pic" class="hidden-desktop" src="assets/video/Snapshots/food.jpg" alt="">
             </div> -->
-            <!-- End video background -->
+        <!-- End video background -->
 
-            <!-- Main Title -->
-            <section id="main_title">
-                <h1>Bucataria lui Chef Tigaie</h1>
-            </section>
-            <!-- End main title -->
+        <!-- Main Title -->
+        <section id="main_title">
+            <h1>Bucataria lui Chef Tigaie</h1>
+        </section>
+        <!-- End main title -->
 
-            <!-- About section -->
-            <section id="about">
-                <h1 id="about_title">Despre mine</h1>
-                <a class = "about_logo" href = "about.html"><img src="assets/img/about/chef_about.png"></a>
-                <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie si numeroase premii.
-                          Am creeat acest site pentru a oferi din tainele acestei meserii celor care vor sa invete.
-                          Doresc sa prezint o serie de retete unele dintre ele fiind creatie proprie altele imprumutate
-                          de la marii bucatari ai lumii.
+        <!-- About section -->
+        <section id="about">
+            <h1 id="about_title">Despre mine</h1>
+            <a class="about_logo" href="about.html">
+                <img src="assets/img/about/chef_about.png">
+            </a>
+            <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie si numeroase premii. Am creeat acest
+                site pentru a oferi din tainele acestei meserii celor care vor sa invete. Doresc sa prezint o serie de retete
+                unele dintre ele fiind creatie proprie altele imprumutate de la marii bucatari ai lumii.
+            </article>
+        </section>
+        <!--End about section -->
+
+        <!-- begin recipe -->
+
+        <section id="recipe">
+
+            <div class="container">
+                <article>
+                    <h2>Retetele mele</h2>
+                    <p>Prezint cateva din secretele mele culinare. Arunca o privire si invata cele mai savuroase retete!</p>
                 </article>
-            </section>
-            <!--End about section -->
+            </div>
+            <div id="imagini">
+                <img src="assets/img/recipe/img1.jpg" alt="">
+                <img src="assets/img/recipe/img2.jpg" alt="">
+                <img src="assets/img/recipe/img3.jpg" alt="">
+                <img src="assets/img/recipe/img4.jpg" alt="">
+                <img src="assets/img/recipe/img5.jpg" alt="">
+                <img src="assets/img/recipe/img6.jpg" alt="">
+                <img src="assets/img/recipe/img7.jpg" alt="">
+                <img src="assets/img/recipe/img8.jpg" alt="">
+                <img src="assets/img/recipe/img9.jpg" alt="">
+                <img src="assets/img/recipe/img10.jpg" alt="">
 
-            <!-- begin recipe -->
 
-            <section id="recipe">
+            </div>
 
-                <div class="container">
-                    <article>
-                        <h2>Retetele mele</h2>
-                        <p>Prezint cateva din secretele mele culinare. Arunca o privire si invata cele mai savuroase retete!</p>
-                    </article>
-                </div>
-                <div id="imagini">
-                    <img class = "muschi" src="assets/img/recipe/img1.jpg" alt="">
-                    <img src="assets/img/recipe/img2.jpg" alt="">
-                    <img src="assets/img/recipe/img3.jpg" alt="">
-                    <img src="assets/img/recipe/img4.jpg" alt="">
-                    <img src="assets/img/recipe/img5.jpg" alt="">
-                    <img src="assets/img/recipe/img6.jpg" alt="">
-                    <img src="assets/img/recipe/img7.jpg" alt="">
-                    <img src="assets/img/recipe/img8.jpg" alt="">
-                    <img src="assets/img/recipe/img9.jpg" alt="">
-                    <img src="assets/img/recipe/img10.jpg" alt="">
-                    
+        </section>
+        <!-- end recipe -->
 
-                </div>
+        <section id="recipe_iframe">
+            <div class="content">
+                <ul>
+                    <li>
+                        <a class="starter_icon" href="starter.html" target="iframe_recipe"></a>
+                        <a class="category" href="fel_principal.html" target="iframe_recipe">Fel principal</a>
+                    </li>
+                    <li>
+                        <a class="starter_icon" href="starter.html" target="iframe_recipe"></a>
+                        <a class="category" href="starter.html" target="iframe_recipe">Starter</a>
+                    </li>
+                    <li>
+                        <a class="starter_icon" href="lista_desert.html" target="iframe_recipe"></a>
+                        <a class="category" href="lista_desert.html" target="iframe_recipe">Desert</a>
+                    </li>
+                </ul>
 
-            </section>
-            <!-- end recipe -->
 
-            <section id = "recipe_iframe">
-                <div class = "navbar_recipe">
-                    <a href="fel_principal.html" target="iframe_recipe">Fel principal</a>
-                    <a href="starter.html" target="iframe_recipe">Starter</a>
-                    <a href="desert.html" target="iframe_recipe">Desert</a>
-                </div> 
-
-                    
                 <div align="center">
-                    <iframe class = "link" src="prajituri.html" name="iframe_recipe">
+                    <iframe class="link" src="prajituri.html" name="iframe_recipe">
                         <p>Your browser does not support iframes.</p>
                     </iframe>
                 </div>
-
-            </section>
+            </div>
+        </section>
     </body>
 
 </html>
