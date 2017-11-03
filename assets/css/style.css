@@ -1,20 +1,11 @@
-
-/* Font */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto Regular'), 
-         local('Roboto-Regular'), 
-         url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) 
-         format('woff');
-  }
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 /* Global Styles */
 
 
 html,body {
-  font-family:'Oleo Script', Helvetica, sans-serif;
+  font-family:'Dosis', sans-serif;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -142,13 +133,12 @@ nav .icon {
 }
 
 #main_title h1 {
-  font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif;
+  font-family: 'Pacifico', cursive;
   color: whitesmoke;
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
   font-size: 88px;
   text-align: center;
   padding: 20px 20px;
-  position: absolute;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   display: flex;
@@ -172,7 +162,7 @@ nav .icon {
 
 #about {
   padding: 90px 0;
-  
+  font-family: 'Dancing Script', cursive;
   overflow: auto;
   font-size: 24px;
   background-color: rgba(31, 109, 31, 0.733);
@@ -309,8 +299,17 @@ nav .icon {
 }
 
 #recipe_iframe .content{
-  background-color: rgba(31, 109, 31, 0.733);
+  background-color: rgba(45, 107, 34, 0.657);
   height: 1500px;
+  text-align: center;
+}
+
+#recipe_iframe h2 {
+  font-size: 48px;
+  color: white;
+  text-shadow: green;
+  margin: 0;
+  padding: 20px 0;
 }
 
 
@@ -344,6 +343,7 @@ nav .icon {
   background-repeat: no-repeat;
   position: relative;
   font-size: 36px;
+  text-decoration: none;
 }
 
 #recipe_iframe ul .category {
@@ -355,17 +355,67 @@ nav .icon {
   border-radius: 50%;
 }
 
+@keyframes rotater {
+  0% { transform:rotate(0) scale(1) }
+  50% { transform:rotate(360deg) scale(1.5) }
+  100% { transform:rotate(720deg) scale(1) }
+  }
+
+#recipe_iframe ul .starter_icon:hover{
+  /* safari / chrome / mozilla */
+	animation-name:rotater; 
+	animation-duration:500ms; 
+	animation-iteration-count:1; 
+	animation-timing-function: ease-out;
+}
+
 #recipe_iframe .link {
  width: 90%;
  margin: 40px 40px auto;
  height: 700px;
 }
 
+footer{
+  text-align: center;
+  font-family: Roboto;
+}
+
+footer ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  padding: 20px;
+}
+
+footer ul li a{
+  text-decoration: none;
+}
 
 
+footer .fa {
+  text-align: center;
+  font-size: 24px;
+}
 
+footer .fa:hover {
+  color: crimson;
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -o-transform: scale(2, 2);
+  transform: scale(2, 2);
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
 
-
+footer h4{
+  margin: 0;
+}
 
 
 
