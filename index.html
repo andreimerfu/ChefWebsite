@@ -7,58 +7,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Another try to create my first website! ### If you like this, donate ! ###</title>
-    <script src="assets/js/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/script.js"></script>
+   
 
 
     <body>
         <header>
-            <nav id="myTopnav">
-                <a href="#about">Despre mine</a>
+            <nav class="myTopnav">
+                <a href="#linkAbout">Despre mine</a>
                 <!-- <a href="#recipe">Retete</a> -->
                 <div class="retete">
-                    <button onclick="dropDown()" class="dropbtn">Retete</button>
-                    <div id="retete_dropdown" class="retete-content">
+                    <button class="dropbtn">Retete</button>
+                    <div class="retete-content">
                         <a href="#recipe">Starter</a>
                         <a href="#recipe">Fel principal</a>
                         <a href="#recipe">Desert</a>
                     </div>
                 </div>
-                <a class="logo" href="index.html" id="logo" onclick="myFunction()">
+                <a class="logo" href="index.html" class="logo" onclick="myFunction()">
                     <img src="assets/img/header/logo.png">
                 </a>
-                <a href="#price">Cartea de bucate</a>
-                <a href="#contact">Contact</a>
+                <a href="#linkCarteBucate">Cartea de bucate</a>
+                <a href="#linkContact">Contact</a>
             </nav>
 
-            <div class="nav_mobile" id="nav_mobile">
+            <div id="nav_mobile" class="nav_mobile">
                 <a href="#about">Despre mine</a>
                 <a href="#recipe">Retete</a>
-                <a href="#price">CV</a>
+                <a href="#price">Carte de bucate</a>
                 <a href="#contact">Contact</a>
             </div>
 
         </header>
 
-        <!--Begin video background -->
-        <!-- <div id="overlay">
-                <video class="visible-desktop" id="hero-vid" poster="assets/video/Snapshots/food.jpg" autoplay loop muted>
-                    <source type="video/webm" src="assets/video/WEBM/food.webm"></source>
-                    <source type="video/mp4" src="assets/video/MP4/food.mp4"></source>
-                </video>
-                <img id="hero-pic" class="hidden-desktop" src="assets/video/Snapshots/food.jpg" alt="">
+        <!--Begin vclasseo background -->
+        <!-- <div class="overlay">
+                <vclasseo class="visible-desktop" class="hero-vclass" poster="assets/vclasseo/Snapshots/food.jpg" autoplay loop muted>
+                    <source type="vclasseo/webm" src="assets/vclasseo/WEBM/food.webm"></source>
+                    <source type="vclasseo/mp4" src="assets/vclasseo/MP4/food.mp4"></source>
+                </vclasseo>
+                <img class="hero-pic" class="hclassden-desktop" src="assets/vclasseo/Snapshots/food.jpg" alt="">
             </div> -->
-        <!-- End video background -->
+        <!-- End vclasseo background -->
 
         <!-- Main Title -->
-        <section id="main_title">
+        <section class="main_title">
             <h1>Bucataria lui Chef Tigaie</h1>
         </section>
         <!-- End main title -->
 
         <!-- About section -->
-        <section id="about">
-            <h1 id="about_title">Despre mine</h1>
+        <section class="about" id="linkAbout">
+            <h1 class="about_title">Despre mine</h1>
             <a class="about_logo" href="about.html">
                 <img src="assets/img/about/chef_about.png">
             </a>
@@ -71,7 +70,7 @@
 
         <!-- begin recipe -->
 
-        <section id="recipe">
+        <section class="recipe" id = "linkRecipe">
 
             <div class="container">
                 <article>
@@ -79,7 +78,7 @@
                     <p>Prezint cateva din secretele mele culinare. Arunca o privire si invata cele mai savuroase retete!</p>
                 </article>
             </div>
-            <div id="imagini">
+            <div class="imagini">
                 <img src="assets/img/recipe/img1.jpg" alt="">
                 <img src="assets/img/recipe/img2.jpg" alt="">
                 <img src="assets/img/recipe/img3.jpg" alt="">
@@ -97,7 +96,7 @@
         </section>
         <!-- end recipe -->
 
-        <section id="recipe_iframe">
+        <section class="recipe_iframe" id = "linkCarteBucate">
             <div class="content">
                 <h2> Cartea de bucate a lui chef Tigaie </h2>
                 <ul>
@@ -106,11 +105,11 @@
                         <a class="category" href="assets/pages/lista_starter.html" target="iframe_recipe">Starter</a>
                     </li>
                     <li>
-                        <a class="starter_icon" href="starter.html" target="iframe_recipe"></a>
+                        <a class="fel_principal_icon" href="starter.html" target="iframe_recipe"></a>
                         <a class="category" href="fel_principal.html" target="iframe_recipe">Fel principal</a>
                     </li>
                     <li>
-                        <a class="starter_icon" href="assets/pages/lista_desert.html" target="iframe_recipe"></a>
+                        <a class="desert_icon" href="assets/pages/lista_desert.html" target="iframe_recipe"></a>
                         <a class="category" href="assets/pages/lista_desert.html" target="iframe_recipe">Desert</a>
                     </li>
                 </ul>
@@ -125,15 +124,15 @@
         </section>
 
         <!-- Start contact section -->
-        <section id="contact">
+        <section class="contact" id = "linkContact">
             <div class = "content">
                 <h2>Contact</h2>
                 <p>Ai intrebari despre bucatarie? Scrie-mi !</p>
                 <form>
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" class="fname" name="fname">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lname">
+                    <input type="text" class="lname" name="lname">
                     <label for="message">Message</label>
                     <textarea rows="4" cols="50"></textarea>
                   </form>
@@ -154,7 +153,7 @@
                         <a href="#" class="fa fa-google"></a>
                     </li>
                     <li>
-                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="https://www.linkedin.com/in/andrei-merfu-035615135/" class="fa fa-linkedin"></a>
                     </li>
                     <li>
                         <a href="#" class="fa fa-instagram"></a>
