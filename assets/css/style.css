@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url(https://fonts.googleapis.com/css?family=Exo);
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 @font-face {
   font-family: 'Pacifico';
@@ -27,7 +29,6 @@ nav{
   background-color: whitesmoke;
   align-items: center;
   justify-content: center;
-  position: fixed;
   z-index: 1000;
   padding: 0px 0px 0px 0px;
 }
@@ -38,7 +39,7 @@ nav a, nav .dropbtn{
   opacity: none;
   font-size: 28px;
   margin: 0 40px;
-  font-family: 'Oleo Script', Helvetica, sans-serif;
+  font-family: 'Lobster', cursive;
   background-color: transparent;
   border-style: none;
   cursor: pointer;
@@ -81,7 +82,7 @@ nav .icon {
   display: none;
   position: absolute;
   background-color: whitesmoke;
-  min-width: 160px;
+  min-width: 230px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -210,6 +211,121 @@ nav .icon {
   bottom:20px;
 }
 
+.skills {
+  width:inherit;
+  position:relative;
+  float:left;
+  padding:30px 0;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+#skill { 
+	list-style: none;
+	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	width: 296px;
+	margin: 50px auto 0;
+	position: relative;
+	line-height: 2em;
+	padding: 30px 0;
+}
+
+#skill li { 
+	margin-bottom:50px; 
+	background:#e9e5e2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));
+	background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: -moz-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: -ms-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: -o-linear-gradient(top, #e1ddd9, #e9e5e2);
+	background-image: linear-gradient(top, #e1ddd9, #e9e5e2);  
+	height:20px; 
+	border-radius:10px; 
+	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	 
+	box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;	  
+}
+
+#skill li h3 { 
+	position:relative; 
+	top:-25px;
+}
+
+.bar { 
+	height:18px; 
+	margin:1px 2px;  
+	position:absolute;
+	border-radius:10px;
+	-moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+	-webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;	 
+	box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;		
+}
+
+.creativity {
+	width:100%; 
+	-moz-animation:creativity 2s ease-out;
+	-webkit-animation:creativity 2s ease-out;
+	background-color: #f674a4;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f674a4), to(#e06995));
+	background-image: -webkit-linear-gradient(top, #f674a4, #e06995);
+	background-image: -moz-linear-gradient(top, #f674a4, #e06995);
+	background-image: -ms-linear-gradient(top, #f674a4, #e06995);
+	background-image: -o-linear-gradient(top, #f674a4, #e06995);
+	background-image: linear-gradient(top, #f674a4, #e06995);
+}
+
+.experience {
+	width:90%;
+	-moz-animation:experience 2s ease-out;
+	-webkit-animation:experience 2s ease-out;
+	background-color: #f0bb4b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0bb4b), to(#d9aa44));
+	background-image: -webkit-linear-gradient(top, #f0bb4b, #d9aa44);
+	background-image: -moz-linear-gradient(top, #f0bb4b, #d9aa44);
+	background-image: -ms-linear-gradient(top, #f0bb4b, #d9aa44);
+	background-image: -o-linear-gradient(top, #f0bb4b, #d9aa44);
+	background-image: linear-gradient(top, #f0bb4b, #d9aa44);
+}
+
+.attention {
+	width:65%;
+	-moz-animation:attention 2s ease-out;
+	-webkit-animation:attention 2s ease-out;
+	background-color: #a1ce5b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#a1ce5b), to(#91ba52));
+	background-image: -webkit-linear-gradient(top, #a1ce5b, #91ba52);
+	background-image: -moz-linear-gradient(top, #a1ce5b, #91ba52);
+	background-image: -ms-linear-gradient(top, #a1ce5b, #91ba52);
+	background-image: -o-linear-gradient(top, #a1ce5b, #91ba52);
+	background-image: linear-gradient(top, #a1ce5b, #91ba52);
+}
+
+.organization {
+	width:80%;
+	-moz-animation:organization 2s ease-out;
+	-webkit-animation:organization 2s ease-out;
+	background-color: #66b3cc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#66b3cc), to(#5da3ba));
+	background-image: -webkit-linear-gradient(top, #66b3cc, #5da3ba);
+	background-image: -moz-linear-gradient(top, #66b3cc, #5da3ba);
+	background-image: -ms-linear-gradient(top, #66b3cc, #5da3ba);
+	background-image: -o-linear-gradient(top, #66b3cc, #5da3ba);
+	background-image: linear-gradient(top, #66b3cc, #5da3ba)	
+}
+
+@-moz-keyframes creativity {0%  { width:0px;} 100%{ width:100%;}  }
+@-moz-keyframes experience        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-moz-keyframes attention      { 0%  { width:0px;} 100%{ width:65%;}  }
+@-moz-keyframes organization   { 0%  { width:0px;} 100%{ width:80%;}  }
+
+@-webkit-keyframes creativity       { 0%  { width:0px;} 100%{ width:100%;}  }
+@-webkit-keyframes experience        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-webkit-keyframes attention      { 0%  { width:0px;} 100%{ width:65%;}  }
+@-webkit-keyframes organization   { 0%  { width:0px;} 100%{ width:80%;}  }
+
 
 /* Recipe */
 
@@ -269,6 +385,7 @@ nav .icon {
   padding: 40px;
   height: 200px;
   list-style: none;
+  display: flex;
 }
 
 .recipe_iframe ul li {
@@ -276,7 +393,6 @@ nav .icon {
   vertical-align: top;
   text-align: center;
   position: relative;
-  display: inline-block;
   margin: 0 auto;
 }
 
@@ -451,34 +567,35 @@ footer h4{
   }
 }
 
-@media screen and (min-width: 640px){
+
+
+@media screen and (min-width: 768px){
   .nav_mobile{display: none;}
 }
 
-@media screen and (max-width: 640px){
- nav a {display: none;}
+@media screen and (max-width: 768px){
+  nav {display: none;}
  nav .retete {display: none;}
- #nav_mobile {
-   display: block;
+ .nav_mobile {
+   display: none;
    position: fixed;
-   z-index: 1000;
  }
- nav{
-  background-color: transparent;
-  }
- .recipe_iframe ul  {
-  padding: 40px 0px;
- }
+
 
  .recipe_iframe .starter_icon,  .recipe_iframe .fel_principal_icon,  .recipe_iframe .desert_icon{
    width: 88px;
    height: 88px;
  }
 
+ .recipe_iframe ul {
+   display: flex;
+ }
+
  .recipe_iframe ul .category{
    width: 80px;
    font-size: 16px;
  }
+
 
 .recipe_iframe .link{
   margin: 0;
@@ -501,6 +618,10 @@ footer h4{
 }
 
 @media screen and (max-width: 768px){
+
+  .retete-content {
+    min-width: 160px;
+  }
   .nav_mobile a{
     padding: 14px 12px;
     font-size: 17px;

@@ -14,27 +14,29 @@
     <header>
         <nav class="myTopnav">
             <a href="#linkAbout">Despre mine</a>
-            <!-- <a href="#recipe">Retete</a> -->
-            <div class="retete">
-                <button class="dropbtn">Retete</button>
-                <div class="retete-content">
-                    <a href="#recipe">Starter</a>
-                    <a href="#recipe">Fel principal</a>
-                    <a href="#recipe">Desert</a>
-                </div>
-            </div>
+            <a href="#linkRecipe">Retete</a> 
+            
             <a class="logo" href="index.html" class="logo" onclick="myFunction()">
                 <img src="assets/img/header/logo.png">
             </a>
-            <a href="#linkCarteBucate">Cartea de bucate</a>
+            <div class="retete">
+                <button href = "#linkCarteBucate" class="dropbtn">Carte de bucate</button>
+                <div class="retete-content">
+                    <a href="#linkCarteBucate">Starter</a>
+                    <a href="#linkCarteBucate">Fel principal</a>
+                    <a href="#linkCarteBucate">Desert</a>
+                </div>
+            </div>
             <a href="#linkContact">Contact</a>
         </nav>
 
         <div id="nav_mobile" class="nav_mobile">
-            <a href="#about">Despre mine</a>
-            <a href="#recipe">Retete</a>
-            <a href="#price">Carte de bucate</a>
-            <a href="#contact">Contact</a>
+            <button href = "#linkCarteBucate" class="dropbtn">Carte de bucate</button>
+            <div class="retete-content">
+                <a href="#linkCarteBucate">Starter</a>
+                <a href="#linkCarteBucate">Fel principal</a>
+                <a href="#linkCarteBucate">Desert</a>
+            </div>
         </div>
 
     </header>
@@ -68,6 +70,13 @@
             site pentru a oferi din tainele acestei meserii celor care vor sa invete. Doresc sa prezint o serie de retete
             unele dintre ele fiind creatie proprie altele imprumutate de la marii bucatari ai lumii.
         </article>
+
+        <ul id="skill">
+            <li><span class="bar creativity"></span><h3>Creativity</h3></li>
+            <li><span class="bar experience"></span><h3>Culinary Experience</h3></li>
+            <li><span class="bar attention"></span><h3>Attention to Detail</h3></li>
+            <li><span class="bar organization"></span><h3>Organization</h3></li>
+        </ul>
     </section>
     <!--End about section -->
 
@@ -105,8 +114,8 @@
                     <a class="category" href="assets/pages/lista_starter.html" target="iframe_recipe">Starter</a>
                 </li>
                 <li>
-                    <a class="fel_principal_icon" href="starter.html" target="iframe_recipe"></a>
-                    <a class="category" href="fel_principal.html" target="iframe_recipe">Fel principal</a>
+                    <a class="fel_principal_icon" href="assets/pages/lista_fel_principal.html" target="iframe_recipe"></a>
+                    <a class="category" href="assets/pages/lista_fel_principal.html" target="iframe_recipe">Fel principal</a>
                 </li>
                 <li>
                     <a class="desert_icon" href="assets/pages/lista_desert.html" target="iframe_recipe"></a>
