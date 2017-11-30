@@ -406,6 +406,13 @@ nav .icon {
   outline: 0;
 }
 
+.iframe {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .recipe_iframe ul .category {
   height: 20px;
 }

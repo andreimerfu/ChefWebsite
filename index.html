@@ -16,11 +16,11 @@
             <a href="#linkAbout">Despre mine</a>
             <a href="#linkRecipe">Retete</a> 
             
-            <a class="logo" href="index.html" class="logo" onclick="myFunction()">
-                <img src="assets/img/header/logo.png">
+            <a class="logo" href="index.html">
+                <img src="assets/img/header/logo.png" alt = "Eroare incarcare logo">
             </a>
             <div class="retete">
-                <button href = "#linkCarteBucate" class="dropbtn">Carte de bucate</button>
+                <button class="dropbtn">Carte de bucate</button>
                 <div class="retete-content">
                     <a href="#linkCarteBucate">Starter</a>
                     <a href="#linkCarteBucate">Fel principal</a>
@@ -31,7 +31,7 @@
         </nav>
 
         <div id="nav_mobile" class="nav_mobile">
-            <button href = "#linkCarteBucate" class="dropbtn">Carte de bucate</button>
+            <button class="dropbtn">Carte de bucate</button>
             <div class="retete-content">
                 <a href="#linkCarteBucate">Starter</a>
                 <a href="#linkCarteBucate">Fel principal</a>
@@ -62,13 +62,14 @@
     <section class="about" id="linkAbout">
         <h1 class="about_title">Despre mine</h1>
         <div class="about_logo">
-            <img src="assets/img/about/chef_about.png">
+            <img src="assets/img/about/chef_about.png" alt = "Eroare incarcare logo about">
         </div>
            
     
-        <article> Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie si numeroase premii. Am creeat acest
+        <article> 
+            <h4>Sunt Chef Costel Tigaie, cu o experienta de peste 20 de ani in bucatarie si numeroase premii. Am creeat acest
             site pentru a oferi din tainele acestei meserii celor care vor sa invete. Doresc sa prezint o serie de retete
-            unele dintre ele fiind creatie proprie altele imprumutate de la marii bucatari ai lumii.
+            unele dintre ele fiind creatie proprie altele imprumutate de la marii bucatari ai lumii.</h4>
         </article>
 
         <ul id="skill">
@@ -124,9 +125,8 @@
             </ul>
 
 
-            <div class="iframe" align="center">
+            <div class="iframe">
                 <iframe class="link" src="assets/pages/lista_starter.html" name="iframe_recipe">
-                    <p>Your browser does not support iframes.</p>
                 </iframe>
             </div>
         </div>
@@ -138,11 +138,11 @@
             <h2>Contact</h2>
             <p>Ai intrebari despre bucatarie? Scrie-mi !</p>
             <form>
-                <label for="fname">First Name</label>
+                <label >First Name</label>
                 <input type="text" class="fname" name="fname">
-                <label for="lname">Last Name</label>
+                <label >Last Name</label>
                 <input type="text" class="lname" name="lname">
-                <label for="message">Message</label>
+                <label >Message</label>
                 <textarea rows="4" cols="50"></textarea>
                 </form>
                 <button class="button button2">Trimite</button>
