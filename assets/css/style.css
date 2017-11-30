@@ -79,17 +79,21 @@ nav .icon {
   display: inline-block;
 }
 
+.dropbtn{
+  cursor: pointer;
+}
+
 .retete-content {
   display: none;
   position: absolute;
   background-color: whitesmoke;
   min-width: 230px;
-  overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 999;
 }
 
 .retete-content a {
+  float: none;
   font-size: 18px;
   text-align: center;
   color: teal;
@@ -406,12 +410,7 @@ nav .icon {
   outline: 0;
 }
 
-.iframe {
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .recipe_iframe ul .category {
   height: 20px;
@@ -456,6 +455,7 @@ nav .icon {
 }
 .iframe{
   padding:60px;
+  margin-left: 100px;
 }
 
     /* Continut iframe retete */
@@ -758,4 +758,54 @@ footer h4{
     grid-column: 2;
     grid-row: 4;
   }
+}
+
+
+@media screen and (max-width: 400px){
+  wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px;
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two { 
+    grid-column: 1 ;
+    grid-row: 2 ;
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .four{
+    grid-column: 1 ;
+    grid-row: 4;
+    background-image:url(../img/recipe_iframe/food.png);
+    background-position: left center;
+  }
+  .five{
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .six {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  .seven {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .iframe .link{
+    width: 250px;
+  }
+
+  .iframe {
+    margin-left: 0px;
+  }
+
 }
