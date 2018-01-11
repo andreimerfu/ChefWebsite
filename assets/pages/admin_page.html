@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Page</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_admin.css">
 </head>
 <body>
     <button class="button button2" id = "getMessagesButton">Vezi mesaje</button>
+    <button class="button button3" id = "getUnreadedMessages">Vezi mesaje necitite</button>
+    <button class="button button4" id = "getReadedMessages">Vezi mesaje citite</button>
     <div class = "adminPanel">
     <form id="postData">
             Id for Select <br/>
@@ -26,12 +28,16 @@
             Message <br/>
             <textarea id = "textArea" rows="4" cols="50"></textarea>
             <br/>
+            Response <br/>
+            <textarea id = "textArea" rows="4" cols="50"></textarea>
+            <br/>
             Read <br/>
             <input type="text" name="" id="read" />
             <br/>
-            <button type="button" class="btn info" id = "select"> Select </button>
-            <button type="button" class="btn success" id = "edit">Modifica </button>
-            <button type="button" class="btn danger" id = "delete">Sterge</button>
+            <button type="button" class="button button5" id = "select"> Select </button>
+            <button type="button" class="button button" id = "edit">Modifica </button>
+            <button type="button" class="button button3" id = "delete">Sterge</button>
+            <button type="button" class="button button2" id = "response">Raspunde</button>
         </form>
         </div>
     <script src = "../js/script.js"></script>

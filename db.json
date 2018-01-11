@@ -3,10 +3,34 @@
     {
       "firstName": "Andrei",
       "lastName": "Merfu",
-      "email": "andreimerfu@outlook.com",
-      "text": "Sunteti varza frate",
-      "read": "false",
+      "email": "andreimerfu@yahoo.ro",
+      "text": "Cele mai bune retete jur pa viata mea !",
+      "read": "true",
+      "id": 1
+    },
+    {
+      "firstName": "Emilutz",
+      "lastName": "Grasutzu",
+      "email": "emilutz@gmail.com",
+      "text": "Astept retete cu mici sa imi priasca la lemne !",
+      "read": "true",
       "id": 2
+    },
+    {
+      "firstName": "Sandu",
+      "lastName": "Ciorba",
+      "email": "sanduciorba@yahoo.ro",
+      "text": "Ciorba de potroace nu aveti boss ?",
+      "read": "true",
+      "id": 3
+    },
+    {
+      "firstName": "Hater",
+      "lastName": "HaterRau",
+      "email": "hater@gmail.com",
+      "text": "Sunt de kkt retetele plecati in germania dupa masini !",
+      "read": "false",
+      "id": 4
     }
   ]
 }

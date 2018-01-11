@@ -4,6 +4,45 @@ var htmlFileName = window.location.pathname.split("/").pop();
 
 if (htmlFileName == 'index.html' || htmlFileName == '') {
     document.getElementById('commentSendButton').addEventListener('click', sendMessage);
+    window.onload = function(){
+        fetch(urlContact).then((res) => res.json())
+        .then((data) => {
+            var arrayId = [];
+            for(var i = 0; i < data.length; i++) {
+                if(data[i].read === 'true') {
+                    arrayId.push(data[i].id);
+                }
+            }
+            if(arrayId.length < 3)
+            {
+                var elem = document.getElementById('ratings');
+                elem.parentNode.removeChild(elem);
+            }
+            else {
+                Array.prototype.shuffle = function() {
+                    var j, x, i;
+                    for(i = this.length - 1; i > 0; i--) {
+                        j = Math.floor(Math.random() * (i + 1));
+                        x = this[i];
+                        this[i] = this[j];
+                        this[j] = x;
+                    }
+            }
+    
+            arrayId.shuffle();
+            var item1 = arrayId[0] - 1;
+            var item2 = arrayId[1] - 1;
+            var item3 = arrayId[2] - 1;
+
+            document.getElementById("reply1_name").innerHTML = data[item1].firstName + " " + data[item1].lastName;
+            document.getElementById("reply1_text").innerHTML = data[item1].text;
+            document.getElementById("reply2_name").innerHTML = data[item2].firstName + " " + data[item2].lastName;
+            document.getElementById("reply2_text").innerHTML = data[item2].text;
+            document.getElementById("reply3_name").innerHTML = data[item3].firstName + " " + data[item3].lastName;
+            document.getElementById("reply3_text").innerHTML = data[item3].text;
+            }
+        })
+    }
 }
 else if (htmlFileName === 'admin_page.html') {
     document.getElementById('getMessagesButton').addEventListener('click', getJSON);
@@ -11,6 +50,7 @@ else if (htmlFileName === 'admin_page.html') {
     document.getElementById('edit').addEventListener('click', editAMessage);
     document.getElementById('delete').addEventListener('click', deleteMessage);
 }
+
 
 /*Now, create a sendMessage function (Method: POST) */
 function sendMessage() {
@@ -20,7 +60,7 @@ function sendMessage() {
         formData.append('lastName', document.getElementById('lname').value);
         formData.append('email', document.getElementById('iemail').value);
         formData.append('text', document.getElementById('textArea').value);
-        formData.append('read', false);
+        formData.append('read', 'false');
     result = {};
     for(var entry of formData.entries()) {
         result[entry[0]] = entry[1];
@@ -62,22 +102,25 @@ function getJSON() {
     fetch(urlContact).then((res) => res.json())
               .then((data) => {
                     clearListAdmin();
+                    
                  for(var i = 0; i < data.length; i++) {
+                    var divMess = document.createElement("div");
+                        ulDOM.appendChild(divMess);
                      var liDOM = document.createElement('li');
                          liDOM.innerHTML = "Id: " + data[i].id;
-                         ulDOM.appendChild(liDOM);
+                         divMess.appendChild(liDOM);
                      var liDOM = document.createElement('li');
                          liDOM.innerHTML = "First Name: " + data[i].firstName + " Last Name: " + data[i].lastName;
-                         ulDOM.appendChild(liDOM);
+                         divMess.appendChild(liDOM);
                      var liDOM = document.createElement('li');
                          liDOM.innerHTML = "Email: \n" + data[i].email;
-                         ulDOM.appendChild(liDOM);
+                         divMess.appendChild(liDOM);
                      var liDOM = document.createElement('li');
                          liDOM.innerHTML = "Message: \n" + data[i].text;
-                         ulDOM.appendChild(liDOM);
+                         divMess.appendChild(liDOM);
                      var liDOM = document.createElement('li');
                          liDOM.innerHTML = "Status: " + data[i].read;
-                         ulDOM.appendChild(liDOM);
+                         divMess.appendChild(liDOM);
                  } 
         })
     }
@@ -100,6 +143,10 @@ function selectElement() {
                                     document.getElementById('textArea').value = data[i].text;
                                     document.getElementById('read').value = data[i].read;
                                 }
+                            }
+                            if (document.getElementById('email').value == ''){
+                                alert('Nu exista acest id in JSON');
+                                return;
                             }
                         })
     }

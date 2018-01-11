@@ -853,3 +853,26 @@ footer h4{
 .rating label:hover:before {
   color: #FFC107;
 }
+
+
+.ratings {
+  display: inline-flex;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.reply1, .reply2, .reply3 {
+  padding: 30px 40px;
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 0px 40px; 
+  width: 220px;
+  height: 170px; 
+  margin: 0px 40px;
+}
+
+@media screen and (max-width: 769px){
+  .ratings {
+    display: inline-block;
+  }
+}
