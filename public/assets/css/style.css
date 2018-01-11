@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-@import url(https://fonts.googleapis.com/css?family=Exo);
+@import url('https://fonts.googleapis.com/css?family=Exo');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-@font-face {
-  font-family: 'Pacifico';
-  src: url('Pacifico-Regular.ttf');
-}
 
 /* Global Styles */
 

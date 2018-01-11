@@ -131,7 +131,6 @@
             </div>
         </div>
     </section>
-
     <!-- Start contact section -->
     <section class="contact" id = "linkContact">
         <div class = "content">
@@ -139,16 +138,21 @@
             <p>Ai intrebari despre bucatarie? Scrie-mi !</p>
             <form>
                 <label >First Name</label>
-                <input type="text" class="fname" name="fname">
+                <input type="text" class="fname" id="fname" name="fname">
                 <label >Last Name</label>
-                <input type="text" class="lname" name="lname">
+                <input type="text" class="lname" id="lname" name="lname">
+                <label >Email</label>
+                <input type="text" class="iemail" id="iemail" name="iemail">
                 <label >Message</label>
-                <textarea rows="4" cols="50"></textarea>
+                <textarea id = "textArea" rows="4" cols="50"></textarea>
                 </form>
-                <button class="button button2">Trimite</button>
+                <button class="button button2" id = "commentSendButton">Trimite</button>
                 
         </div>
     </section>
+
+    <script src = "assets/js/script.js"></script>
+
     <!--End contact section -->
 
 
