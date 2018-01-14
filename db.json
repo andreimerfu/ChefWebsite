@@ -1,35 +1,39 @@
 {
   "contact": [
     {
-      "firstName": "Andrei",
-      "lastName": "Merfu",
-      "email": "andreimerfu@yahoo.ro",
-      "text": "Cele mai bune retete jur pa viata mea !",
+      "firstName": "Ion",
+      "lastName": "Popescu",
+      "email": "ionpopescu@gmail.com",
+      "text": "Cele mai bune retete ! Atat din bucataria internationala cat si din bucataria romaneasca. Felicitari ChefWebsite !",
       "read": "true",
+      "rating": "0",
       "id": 1
     },
     {
-      "firstName": "Emilutz",
-      "lastName": "Grasutzu",
-      "email": "emilutz@gmail.com",
-      "text": "Astept retete cu mici sa imi priasca la lemne !",
+      "firstName": "Jamila",
+      "lastName": "Bucatareasa",
+      "email": "jamila@yahoo.com",
+      "text": "Un site deosebit, apreciez munca ta ! ",
       "read": "true",
+      "rating": "0",
       "id": 2
     },
     {
-      "firstName": "Sandu",
-      "lastName": "Ciorba",
-      "email": "sanduciorba@yahoo.ro",
-      "text": "Ciorba de potroace nu aveti boss ?",
+      "firstName": "Fane",
+      "lastName": "Borcan",
+      "email": "faneborcanel@yahoo.com",
+      "text": "Cele mai bune retete pentru romani ! Mici, gratare tot ce vrei ! Bravo !",
       "read": "true",
+      "rating": "0",
       "id": 3
     },
     {
-      "firstName": "Hater",
-      "lastName": "HaterRau",
-      "email": "hater@gmail.com",
-      "text": "Sunt de kkt retetele plecati in germania dupa masini !",
+      "firstName": "Catalin",
+      "lastName": "Scarlatescu",
+      "email": "scarlatescu@catalin.ro",
+      "text": "Felicitari Chef. Niste retete foarte gustoase, dar nu mai gustoase ca ale mele :))",
       "read": "false",
+      "rating": "0",
       "id": 4
     }
   ]

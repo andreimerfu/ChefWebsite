@@ -27,7 +27,7 @@ if (htmlFileName == 'index.html' || htmlFileName == '') {
                         this[i] = this[j];
                         this[j] = x;
                     }
-            }
+                }
     
             arrayId.shuffle();
             var item1 = arrayId[0] - 1;
@@ -41,6 +41,7 @@ if (htmlFileName == 'index.html' || htmlFileName == '') {
             document.getElementById("reply3_name").innerHTML = data[item3].firstName + " " + data[item3].lastName;
             document.getElementById("reply3_text").innerHTML = data[item3].text;
             }
+        
         })
     }
 }
@@ -49,6 +50,8 @@ else if (htmlFileName === 'admin_page.html') {
     document.getElementById('select').addEventListener('click', selectElement);
     document.getElementById('edit').addEventListener('click', editAMessage);
     document.getElementById('delete').addEventListener('click', deleteMessage);
+    document.getElementById('getUnreadMessages').addEventListener('click', function() { getMessageList('false'); } );
+    document.getElementById('getReadMessages').addEventListener('click', function() { getMessageList('true'); } );
 }
 
 
@@ -61,6 +64,7 @@ function sendMessage() {
         formData.append('email', document.getElementById('iemail').value);
         formData.append('text', document.getElementById('textArea').value);
         formData.append('read', 'false');
+        formData.append('rating', 0);
     result = {};
     for(var entry of formData.entries()) {
         result[entry[0]] = entry[1];
@@ -91,9 +95,9 @@ if (htmlFileName === "admin_page.html") {
 }
 
 function clearListAdmin() {
-    document.querySelectorAll('li').forEach(function(elemenet) {
-        ulDOM.removeChild(elemenet);
-    })
+    var el = document.querySelector('ul');
+        while(el.firstChild)
+            el.removeChild(el.firstChild);
 }
 
 /*Get messages in admin_page*/
@@ -105,6 +109,7 @@ function getJSON() {
                     
                  for(var i = 0; i < data.length; i++) {
                     var divMess = document.createElement("div");
+                        divMess.setAttribute('id', 'comment');
                         ulDOM.appendChild(divMess);
                      var liDOM = document.createElement('li');
                          liDOM.innerHTML = "Id: " + data[i].id;
@@ -126,6 +131,35 @@ function getJSON() {
     }
 }
 
+function getMessageList(stat) {
+    fetch(urlContact).then((res) => res.json())
+                     .then((data) => {
+                         clearListAdmin();
+
+                         for(var i = 0; i < data.length; i++) {
+                             if(data[i].read == stat) {
+                                var divMess = document.createElement("div");
+                                ulDOM.appendChild(divMess);
+                             var liDOM = document.createElement('li');
+                                 liDOM.innerHTML = "Id: " + data[i].id;
+                                 divMess.appendChild(liDOM);
+                             var liDOM = document.createElement('li');
+                                 liDOM.innerHTML = "First Name: " + data[i].firstName + " Last Name: " + data[i].lastName;
+                                 divMess.appendChild(liDOM);
+                             var liDOM = document.createElement('li');
+                                 liDOM.innerHTML = "Email: \n" + data[i].email;
+                                 divMess.appendChild(liDOM);
+                             var liDOM = document.createElement('li');
+                                 liDOM.innerHTML = "Message: \n" + data[i].text;
+                                 divMess.appendChild(liDOM);
+                             var liDOM = document.createElement('li');
+                                 liDOM.innerHTML = "Status: " + data[i].read;
+                                 divMess.appendChild(liDOM);
+                             }
+                         }
+                     })
+}
+
 /**
  * Select a message method, GET
  */
@@ -142,6 +176,7 @@ function selectElement() {
                                     document.getElementById('email').value = data[i].email;
                                     document.getElementById('textArea').value = data[i].text;
                                     document.getElementById('read').value = data[i].read;
+                                    document.getElementById('rating').value = data[i].rating;
                                 }
                             }
                             if (document.getElementById('email').value == ''){
@@ -162,6 +197,7 @@ function editAMessage() {
         formData.append('email', document.getElementById('email').value);
         formData.append('text', document.getElementById('textArea').value);
         formData.append('read', document.getElementById('read').value);
+        formData.append('rating', document.getElementById('rating').value);
     result = {};
     for(var entry of formData.entries()) {
         result[entry[0]] = entry[1];
